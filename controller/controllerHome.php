@@ -18,15 +18,15 @@ class Biodata
 //Inheritance class Biodata 
 class WorkExp extends Biodata
 {
-    public $position, $company, $maintask, $period;
+    public $position, $company, $maintasks = [], $period;
 
-    public function __construct($nama, $age, $number, $email, $city, $position, $company, $maintask, $period)
+    public function __construct($nama, $age, $number, $email, $city, $position, $company, $maintasks, $period)
     {
 
         parent::__construct($nama, $age, $number, $email, $city);
         $this->position = $position;
         $this->company = $company;
-        $this->maintask = $maintask;
+        $this->maintasks = $maintasks;
         $this->period = $period;
     }
 }
@@ -53,9 +53,15 @@ $workexp1 = new WorkExp(
     "Kabupaten Bandung",
     "HR Admin Assitant & IT Support",
     "PT. Geekhunter International",
-    "Provides recruiter's needs such as CV Edited (edit the CV from original candidate’s CV to the template CV of Geekhunter before sending to client), job post website, job ads poster, etc",
+    [
+        "Provides recruiter's needs such as CV Edited (edit the CV from original candidate’s CV to the template CV of Geekhunter before sending to client), job post website, job ads poster, etc",
+        "Create job ads poster based on clients hiring inquiries and post on Geekhunter's web",
+        "Data validation from several sources for recruiter's needs",
+        "Manage whole settings of Google Workspace"
+    ],
     "2016 - Present"
 );
+
 
 $education1 = new Education(
     "Aldy Wijaya Gustian",
@@ -67,14 +73,3 @@ $education1 = new Education(
     "Sekolah Tinggi Teknologi Bandung",
     "2019 - Present"
 );
-
-// echo $workexp1->getBiodata();
-// var_dump($education1);
-// echo "</br>";
-// var_dump($workexp1);
-
-# OOP for Article
-
-# OOP for Product
-
-# OOP for Contact

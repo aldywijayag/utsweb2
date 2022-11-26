@@ -29,16 +29,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin-right: 50px;">
           <li class="nav-item mx-1">
-            <a class="nav-link active" aria-current="page" href="index.php?page=home">Home</a>
+            <a class="nav-link " aria-current="page" href="index.php?page=home">Home</a>
           </li>
           <li class="nav-item mx-1">
-            <a class="nav-link active" aria-current="page" href="index.php?page=product">Product</a>
+            <a class="nav-link " aria-current="page" href="index.php?page=product">Product</a>
           </li>
           <li class="nav-item mx-1">
-            <a class="nav-link active" aria-current="page" href="index.php?page=article">Article</a>
+            <a class="nav-link " aria-current="page" href="index.php?page=article">Article</a>
           </li>
           <li class="nav-item mx-1">
-            <a class="nav-link active" aria-current="page" href="index.php?page=contact">Contact</a>
+            <a class="nav-link " aria-current="page" href="index.php?page=contact">Contact</a>
           </li>
         </ul>
       </div>

@@ -1,16 +1,16 @@
 <?php
-require 'controller.php';
+require 'controller/controllerHome.php';
 ?>
 
 <!-- Container-->
 <div class="container mt-3">
     <div class="row align-items-start">
-        <div class="col-3 ">
+        <div class="col-md-3">
             <img src="img/foto.jpg" class="rounded img-thumbnail mx-auto d-block" width="75%">
         </div>
 
         <!--Personal Information-->
-        <div class="col-4 md-2 ">
+        <div class="col-md-4 md-2 ">
             <div class="card">
                 <div class="bg-secondary p-2 text-dark bg-opacity-25">Personal Information</div>
                 <div class="card-body">
@@ -49,20 +49,12 @@ require 'controller.php';
                     <h5 class="card-title"><?= $workexp1->position ?></h5>
                     <p class="card-text"><?= $workexp1->company ?> | <?= $workexp1->period ?></p>
                     <p>Main Task:</p>
-                    <ul>
-                        <li>
-                            <?= $workexp1->maintask ?>
-                        </li>
-                        <li>
-                            Create job ads poster based on clients hiring inquiries and post on Geekhunter's web
-                        </li>
-                        <li>
-                            Data validation from several sources for recruiter's needs
-                        </li>
-                        <li>
-                            Manage whole settings of Google Workspace
-                        </li>
-                    </ul>
+                    <?php
+                    foreach ($workexp1->maintasks as $maintask) : ?>
+                        <ul>
+                            <li><?= $maintask; ?></li>
+                        </ul>
+                    <?php endforeach ?>
                 </div>
             </div>
 
